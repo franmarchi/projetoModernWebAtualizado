@@ -1,0 +1,25 @@
+.login-section {
+  max-width: 400px;
+  margin: 2rem auto;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.login-form .form-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+
+.login-form a {
+  text-align: center;
+  color: #333;
+  text-decoration: none;
+}
+
+.login-form a:hover {
+  text-decoration: underline;
+}

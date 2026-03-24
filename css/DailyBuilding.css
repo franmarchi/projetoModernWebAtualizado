@@ -1,0 +1,27 @@
+.diary-section {
+  max-width: 600px;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.image-gallery {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+.image-placeholder {
+  height: 250px;
+  background-color: #e6e6e6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+.gallery-controls {
+  display: flex;
+  justify-content: space-between;
+}

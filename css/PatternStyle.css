@@ -1,0 +1,109 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #e0e0e0; /* cinza médio */
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+header {
+  background-color: #fff;
+  padding: 1rem;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 1.5rem;
+}
+
+/* Main */
+main {
+  flex: 1;
+  padding: 1rem;
+}
+
+/* Footer */
+footer {
+  background-color: #fff;
+  padding: 1rem;
+  border-top: 1px solid #ccc;
+  text-align: center;
+}
+
+footer button {
+  background-color: #fff; 
+  color: #333;
+  border: none; 
+  padding: 0.7rem 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1); 
+}
+
+footer button:hover {
+  background-color: #f9f9f9; 
+}
+
+
+/* Formulários */
+.form-group {
+  margin-bottom: 1rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+/* Botões gerais */
+button {
+  background-color: #fff; 
+  color: #333;
+  border: 1px solid #ccc;
+  padding: 0.7rem 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #f2f2f2;
+}
+
+.icon-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.icon-item {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.icon-item:hover {
+  background-color: #f2f2f2;
+}
