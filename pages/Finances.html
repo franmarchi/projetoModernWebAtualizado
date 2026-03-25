@@ -22,14 +22,19 @@
     <section class="finance-section">
       <div class="card">
         <div class="finance-info">
-          <div class="info-group">
-            <label for="valor-total">Valor Total Estimado:</label>
-            <input type="number" id="valor-total" name="valor-total" step="0.01">
+          <h2>Controle Financeiro</h2>
+          <div class="form-group">
+            <label for="estimated">Valor Estimado</label>
+            <input type="text" id="estimated" value="R$ 150.000,00" readonly>
           </div>
-          <div class="info-group">
-            <label for="valor-real">Valor Real:</label>
-            <input type="number" id="valor-real" name="valor-real" step="0.01">
+          <div class="form-group">
+            <label for="real">Valor Real</label>
+            <input type="text" id="real" value="R$ 165.000,00" readonly>
           </div>
+          <div class="result">
+            <p id="difference">Diferença: R$ 0,00</p>
+          </div>
+
         </div>
 
         <div class="boletos">
@@ -44,12 +49,14 @@
     </section>
   </main>
 
-
   <footer>
     <div class="footer-container">
       <button class="home-btn">Página Inicial</button>
     </div>
   </footer>
+
+  <script src="../js/Finances.js"></script>
+
 </body>
 
 </html>
