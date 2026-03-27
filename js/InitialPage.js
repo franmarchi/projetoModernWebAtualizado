@@ -1,18 +1,21 @@
-document.querySelectorAll(".icon-item button").forEach(button => {
+// Seleciona todos os botões de navegação
+const navButtons = document.querySelectorAll(".icon-grid button");
+
+navButtons.forEach(button => {
   button.addEventListener("click", () => {
-    const destino = button.textContent.trim();
+    const destino = button.dataset.page; // pega o atributo data-page
 
     switch (destino) {
-      case "Diário da Obra":
+      case "daily":
         window.location.href = "../pages/DailyBuilding.html";
         break;
-      case "Documentos":
+      case "documents":
         window.location.href = "../pages/Documents.html";
         break;
-      case "Financeiro":
+      case "finances":
         window.location.href = "../pages/Finances.html";
         break;
-      case "Fale Conosco":
+      case "contact":
         window.location.href = "../pages/ContactUs.html";
         break;
       default:
@@ -21,9 +24,13 @@ document.querySelectorAll(".icon-item button").forEach(button => {
   });
 });
 
-document.querySelector(".logout-btn").addEventListener("click", () => {
-  const ok = confirm("Deseja realmente encerrar a sessão?");
-  if (ok) {
-    window.location.href = "../index.html";
-  }
-});
+// --- Botão Encerrar Sessão ---
+const logoutBtn = document.querySelector(".logout-btn");
+if (logoutBtn) {
+  logoutBtn.addEventListener("click", () => {
+    const confirmar = confirm("Deseja encerrar a sessão?");
+    if (confirmar) {
+      window.location.href = "../index.html"; // volta para tela de login
+    }
+  });
+}

@@ -18,19 +18,14 @@ function calculateDifference() {
   differenceText.textContent = `Diferença: ${formatCurrency(difference)}`;
 
   if (difference > 0) {
-    differenceText.style.color = "red"; 
+    differenceText.style.color = "red";
   } else if (difference < 0) {
-    differenceText.style.color = "green"; 
+    differenceText.style.color = "green";
   } else {
-    differenceText.style.color = "black"; 
+    differenceText.style.color = "black";
   }
 }
 
 calculateDifference();
 
-document.querySelector(".home-btn").addEventListener("click", () => {
-  const confirmar = confirm("Deseja voltar para a Página Inicial?");
-  if (confirmar) {
-    window.location.href = "InitialPage.html";
-  }
-});
+

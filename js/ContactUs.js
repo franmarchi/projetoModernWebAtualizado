@@ -14,12 +14,7 @@ form.addEventListener("submit", (event) => {
   alert("Mensagem enviada com sucesso!");
 
   mensagemInput.value = "";
-  
+
 });
 
-document.querySelector(".home-btn").addEventListener("click", () => {
-  const confirmar = confirm("Deseja voltar para a Página Inicial?");
-  if (confirmar) {
-    window.location.href = "../pages/InitialPage.html";
-  }
-});
+

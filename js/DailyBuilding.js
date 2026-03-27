@@ -12,37 +12,34 @@ const caption = document.querySelector(".image-caption");
 const prevBtn = document.querySelector(".prev-btn");
 const nextBtn = document.querySelector(".next-btn");
 
+const img = document.createElement("img");
+img.alt = "Foto da obra";
+img.classList.add("gallery-image");
+placeholder.appendChild(img);
+
+// Função para atualizar imagem e legenda
 function showImage(index) {
-  const img = document.createElement("img");
   img.src = images[index];
-  img.alt = "Foto da obra";
-
-  img.onload = () => {
-    img.classList.add("show");
-  };
-
-  placeholder.innerHTML = "";
-  placeholder.appendChild(img);
-
   caption.textContent = `Imagem ${index + 1} de ${images.length}`;
 }
 
-prevBtn.addEventListener("click", () => {
-  currentIndex = (currentIndex - 1 + images.length) % images.length;
-  showImage(currentIndex);
-});
+// Botão anterior
+if (prevBtn) {
+  prevBtn.addEventListener("click", () => {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    showImage(currentIndex);
+  });
+}
 
-nextBtn.addEventListener("click", () => {
-  currentIndex = (currentIndex + 1) % images.length;
-  showImage(currentIndex);
-});
+// Botão próximo
+if (nextBtn) {
+  nextBtn.addEventListener("click", () => {
+    currentIndex = (currentIndex + 1) % images.length;
+    showImage(currentIndex);
+  });
+}
 
 showImage(currentIndex);
 
-document.querySelector(".home-btn").addEventListener("click", () => {
-  const confirmar = confirm("Deseja voltar para a Página Inicial?");
-  if (confirmar) {
-    window.location.href = "../pages/InitialPage.html";
-  }
-});
+
 

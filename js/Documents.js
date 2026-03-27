@@ -1,27 +1,22 @@
-const pendingList = document.querySelector(".pending-docs ul");
-const completedList = document.querySelector(".completed-docs ul");
+function setupListTransfer(pendingSelector, completedSelector) {
+  const pendingList = document.querySelector(pendingSelector);
+  const completedList = document.querySelector(completedSelector);
 
-function moveToCompleted(item) {
-  item.style.transition = "opacity 0.5s ease";
-  item.style.opacity = "0";
+  if (!pendingList || !completedList) return;
 
-  setTimeout(() => {
-    completedList.appendChild(item);
-    item.style.opacity = "1";
+  pendingList.querySelectorAll("li").forEach(item => {
+    item.addEventListener("click", () => {
+      item.style.transition = "opacity 0.5s ease";
+      item.style.opacity = "0";
 
-    item.classList.add("completed");
-  }, 500);
+      setTimeout(() => {
+        completedList.appendChild(item);
+        item.style.opacity = "1";
+        item.classList.add("completed"); // adiciona classe para estilo
+      }, 500);
+    });
+  });
 }
 
-pendingList.querySelectorAll("li").forEach(item => {
-  item.addEventListener("click", () => {
-    moveToCompleted(item);
-  });
-});
-
-document.querySelector(".home-btn").addEventListener("click", () => {
-  const confirmar = confirm("Deseja voltar para a Página Inicial?");
-  if (confirmar) {
-    window.location.href = "InitialPage.html";
-  }
-});
+// Chamada da função com os seletores corretos
+setupListTransfer(".pending-docs ul", ".completed-docs ul");
